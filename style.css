@@ -1,0 +1,107 @@
+body {
+  transition: background-color 1.5s;
+}
+
+.playerContainer {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.trackPicture {
+  margin: 30px 0;
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  border-radius: 10%;
+}
+
+.currentPlaying {
+  font-size: 1rem;
+}
+
+.trackName {
+  font-size: 3rem;
+}
+
+.trackArtist {
+  font-size: 1.5rem;
+  padding: 7px 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playPauseTrack, .prevTrack, .nextTrack {
+  padding: 25px;
+  opacity: 0.75;
+
+  transition: opacity .5s;
+}
+
+.playPauseTrack:hover, .prevTrack:hover, .nextTrack:hover {
+  opacity: 1.0;
+}
+
+.sliderContainer {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seekSlider, .volumeSlider {
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seekSlider::-webkit-slider-thumb, .volumeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seekSlider:hover, .volumeSlider:hover {
+  opacity: 1.0;
+}
+
+.seekSlider {
+  width: 60%;
+}
+
+.volumeSlider {
+  width: 30%;
+}
+
+.currentTime, .totalDuration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
+}
