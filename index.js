@@ -1,10 +1,10 @@
 (function () {
   const listOfMusic = [
     {
-      name: "Wind of Change",
-      artist: "Scorpions",
-      image: `./img/windOfChange.png`,
-      path: `./music/windOfChange.mp3`
+      name: "Sweet Child O' Mine",
+      artist: "Guns N' Roses",
+      image: `./img/sweetChildOMine.jpg`,
+      path: `./music/sweetChildOMine.mp3`
     },
     {
       name: "Lose Yourself",
