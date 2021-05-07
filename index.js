@@ -63,7 +63,7 @@
     trackArtist.innerHTML = listOfMusic[musicIndex].artist;
     currentPlaying.innerHTML = "PLAYING " + (musicIndex + 1) + " OF " + listOfMusic.length;
 
-    updateTimer = setInterval(seekUpdate, 1000);
+    updateTimer = setInterval(handleUpdate, 1000);
     current.addEventListener("ended", nextTrack);
     randomColors();
   }
@@ -74,7 +74,6 @@
     slider.value = 0;
   }
 
-  // Load the first track in the tracklist
   loadTrack(musicIndex);
 
   function playPauseTrack() {
@@ -119,16 +118,16 @@
     playTrack();
   }
 
-  function seekTo() {
-    seekto = current.duration * (slider.value / 100);
-    current.currentTime = seekto;
+  function handleTo() {
+    handle = current.duration * (slider.value / 100);
+    current.currentTime = handle;
   }
 
   function setVolume() {
     current.volume = volumeSlider.value / 100;
   }
 
-  function seekUpdate() {
+  function handleUpdate() {
     let seekPosition = 0;
 
     if (!isNaN(current.duration)) {
@@ -168,7 +167,7 @@
   nextButton.addEventListener('click', () => nextTrack());
   previousButton.addEventListener('click', () => prevTrack());
   pausePlayButton.addEventListener('click', () => playPauseTrack());
-  slider.addEventListener('change', () => seekTo());
+  slider.addEventListener('change', () => handleTo());
   volumeSlider.addEventListener('change', () => setVolume());
 
 })()
